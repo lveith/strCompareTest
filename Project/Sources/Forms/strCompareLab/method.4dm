@@ -18,6 +18,8 @@ Case of
 		
 		Form:C1466.str6:=Form:C1466.str1
 		
+		setSameBgColorsForSameContent 
+		
 	: (Form event code:C388=On Clicked:K2:4)
 		
 End case 
