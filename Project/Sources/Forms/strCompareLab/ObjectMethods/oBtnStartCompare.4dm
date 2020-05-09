@@ -339,6 +339,8 @@ Case of
 		$stop:=Milliseconds:C459
 		Form:C1466.loopCharCodesMs:=$stop-$start
 		
+		setSameBgColorsForSameContent 
+		
 End case 
 
   // - EOF -
