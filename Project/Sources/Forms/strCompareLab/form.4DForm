@@ -208,7 +208,7 @@
 				},
 				"oPositionMs": {
 					"type": "input",
-					"left": 205,
+					"left": 199,
 					"top": 25,
 					"width": 121,
 					"height": 17,
@@ -222,7 +222,7 @@
 				},
 				"oPositionMs1": {
 					"type": "input",
-					"left": 345,
+					"left": 331,
 					"top": 25,
 					"width": 121,
 					"height": 17,
@@ -238,7 +238,7 @@
 					"type": "text",
 					"text": "Position",
 					"top": 6,
-					"left": 205,
+					"left": 199,
 					"width": 116,
 					"height": 16
 				},
@@ -246,7 +246,7 @@
 					"type": "text",
 					"text": "LoopCharCodes",
 					"top": 6,
-					"left": 345,
+					"left": 331,
 					"width": 116,
 					"height": 16
 				},
@@ -363,6 +363,16 @@
 					"focusable": false,
 					"contextMenu": "none",
 					"borderStyle": "none"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Time of 15000 comparings",
+					"top": 27,
+					"left": 460,
+					"width": 154,
+					"height": 13,
+					"fontSize": 11,
+					"stroke": "#191970"
 				}
 			}
 		}
