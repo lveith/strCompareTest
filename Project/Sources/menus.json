@@ -35,6 +35,17 @@
 					"method": "startTestForm"
 				},
 				{
+					"title": "vdlOrg",
+					"method": "vdlOrgTest",
+					"startNewProcess": true
+				},
+				{
+					"title": "vdlNew",
+					"method": "vdlNewTest",
+					"startNewProcess": true,
+					"executeWithoutValidating": true
+				},
+				{
 					"title": ":xliff:CommonMenuItemQuit",
 					"shortcutAccel": true,
 					"shortcutKey": "Q",
