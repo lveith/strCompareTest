@@ -7,6 +7,11 @@ C_LONGINT:C283($numberOfRepetitions)
 
 Case of 
 	: (Form event code:C388=On Clicked:K2:4)
+		
+		SET CURSOR:C469(9019)  // cursor wait (...os busy cursor SET CURSOR(4) not work on macosx)
+		  // GOTO XY(1;0)
+		  // MESSAGE(".........please wait.........")
+		
 		$numberOfRepetitions:=Num:C11(Form:C1466.numberOfRepetitions)
 		
 		$start:=Milliseconds:C459
@@ -342,6 +347,8 @@ Case of
 		Form:C1466.loopCharCodesMs:=$stop-$start
 		
 		setSameBgColorsForSameContent 
+		
+		SET CURSOR:C469  // restore cursor
 		
 End case 
 
