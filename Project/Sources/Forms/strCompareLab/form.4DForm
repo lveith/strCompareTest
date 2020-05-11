@@ -13,20 +13,21 @@
 	"bottomMargin": 20,
 	"events": [
 		"onLoad",
-		"onPageChange",
 		"onValidate",
 		"onClick",
-		"onDoubleClick",
 		"onOutsideCall",
-		"onBeginDragOver",
-		"onDragOver",
+		"onDoubleClick",
 		"onDrop",
-		"onAfterKeystroke",
 		"onMenuSelect",
 		"onPluginArea",
-		"onAfterEdit",
+		"onDataChange",
+		"onDragOver",
 		"onTimer",
-		"onBoundVariableChange"
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
 	],
 	"windowTitle": "window title",
 	"destination": "detailScreen",
@@ -368,7 +369,7 @@
 					"type": "text",
 					"text": "150 comparisons repeated",
 					"top": 27,
-					"left": 365,
+					"left": 367,
 					"width": 146,
 					"height": 13,
 					"fontSize": 11,
@@ -376,7 +377,7 @@
 				},
 				"oNumberOfRepetitions": {
 					"type": "input",
-					"left": 508,
+					"left": 510,
 					"top": 27,
 					"width": 66,
 					"height": 13,
@@ -398,7 +399,7 @@
 					"type": "text",
 					"text": "times",
 					"top": 27,
-					"left": 577,
+					"left": 579,
 					"width": 30,
 					"height": 13,
 					"fontSize": 11,
@@ -406,7 +407,7 @@
 				},
 				"oComparisonsTotal": {
 					"type": "input",
-					"left": 365,
+					"left": 367,
 					"top": 7,
 					"width": 242,
 					"height": 13,
@@ -424,7 +425,7 @@
 					"textAlign": "left",
 					"enterable": false,
 					"focusable": false,
-					"right": 607
+					"right": 609
 				}
 			}
 		}
