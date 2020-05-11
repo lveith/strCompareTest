@@ -3,12 +3,14 @@
 C_BOOLEAN:C305($equal)
 C_LONGINT:C283($start;$stop)
 C_LONGINT:C283($i)
+C_LONGINT:C283($numberOfRepetitions)
 
 Case of 
 	: (Form event code:C388=On Clicked:K2:4)
+		$numberOfRepetitions:=Num:C11(Form:C1466.numberOfRepetitions)
 		
 		$start:=Milliseconds:C459
-		For ($i;1;100)
+		For ($i;1;$numberOfRepetitions)
 			$equal:=strComparePosition (Form:C1466.str1;Form:C1466.str2)
 			$equal:=strComparePosition (Form:C1466.str1;Form:C1466.str3)
 			$equal:=strComparePosition (Form:C1466.str1;Form:C1466.str4)
@@ -174,7 +176,7 @@ Case of
 		Form:C1466.positionMs:=$stop-$start
 		
 		$start:=Milliseconds:C459
-		For ($i;1;100)
+		For ($i;1;$numberOfRepetitions)
 			$equal:=strCompareLoopCharCodes (Form:C1466.str1;Form:C1466.str2)
 			$equal:=strCompareLoopCharCodes (Form:C1466.str1;Form:C1466.str3)
 			$equal:=strCompareLoopCharCodes (Form:C1466.str1;Form:C1466.str4)
