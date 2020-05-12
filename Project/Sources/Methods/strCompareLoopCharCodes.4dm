@@ -8,32 +8,30 @@
 
 C_TEXT:C284($1)
 C_TEXT:C284($2)
-C_BOOLEAN:C305($equal;$0)
-C_LONGINT:C283($length1;$length2)
-
-$equal:=False:C215  // default
-
-$length1:=Length:C16($1)
-$length2:=Length:C16($2)
+C_BOOLEAN:C305($0)
+C_LONGINT:C283($i)
 
 Case of 
 	: (Count parameters:C259<2)
-		  // $equal:=False
-	: ($length1#$length2)
-		  // $equal:=False
-	: ($length1<1)
-		  // $equal:=False
+		$0:=False:C215
+		
+	: (Length:C16($1)#Length:C16($2))
+		$0:=False:C215
+		
+	: (Length:C16($1)<1)
+		$0:=True:C214
+		
 	Else 
-		$j:=0
-		$equal:=True:C214  // new default
+		$i:=0
+		
 		  //%R-
 		Repeat 
-			$j:=$j+1
-			$equal:=Bool:C1537(Character code:C91($1[[$j]])=Character code:C91($2[[$j]]))
-		Until (Not:C34($equal) | Not:C34($j<$length1))  // breakLoop, result of (false & xy) is always false
+			$i:=$i+1
+			$0:=(Character code:C91($1[[$i]])=Character code:C91($2[[$i]]))
+		Until (Not:C34($0) | Not:C34($i<Length:C16($1)))  // breakLoop, result of (false & xy) is always false
+		
 		  //%R+
+		
 End case 
-
-$0:=$equal
 
   // - EOF -

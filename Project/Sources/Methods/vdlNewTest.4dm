@@ -38,13 +38,18 @@ Else
 	  // ------- loopAllCharCodes -------
 	$c.push(0)
 	$c[$c.length-1]:=Milliseconds:C459  // start loopAllCharCodes
-	  //%R-
 	For ($i;1;$count;1)
 		$equal:=(Length:C16($t1)=Length:C16($t2))
+		
 		If ($equal)
+			
+			  //%R-
 			For ($j;1;Length:C16($t1);1)
 				$equal:=$equal & (Character code:C91($t1[[$j]])=Character code:C91($t2[[$j]]))
 			End for 
+			
+			  //%R+
+			
 		End if 
 	End for 
 	  //%R+
@@ -55,9 +60,18 @@ Else
 	$c.push(0)
 	$c[$c.length-1]:=Milliseconds:C459  // start Position
 	For ($i;1;$count;1)
-		$equal:=(Length:C16($t1)=Length:C16($t2))
-		If ($equal)
-			$equal:=(Position:C15($t1;$t2;1;*)=1)
+		If (Length:C16($t1)=Length:C16($t2))
+			If (Length:C16($t1)>0)
+				If (Position:C15($t1;$t2;*)=1)
+					$equal:=True:C214
+				Else 
+					$equal:=False:C215
+				End if 
+			Else 
+				$equal:=True:C214
+			End if 
+		Else 
+			$equal:=False:C215
 		End if 
 	End for 
 	$c[$c.length-1]:=Milliseconds:C459-$c[$c.length-1]  // stop Position
