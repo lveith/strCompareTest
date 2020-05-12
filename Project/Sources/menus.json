@@ -35,6 +35,10 @@
 					"method": "startTestForm"
 				},
 				{
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
 					"title": "vdlOrg",
 					"method": "vdlOrgTest",
 					"startNewProcess": true
@@ -44,6 +48,19 @@
 					"method": "vdlNewTest",
 					"startNewProcess": true,
 					"executeWithoutValidating": true
+				},
+				{
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "vdlOrg_withRangeCheckActive",
+					"method": "vdlOrgTest_withRangeCheckActive",
+					"startNewProcess": true
+				},
+				{
+					"isSeparator": true,
+					"enabled": false
 				},
 				{
 					"title": ":xliff:CommonMenuItemQuit",
