@@ -9,16 +9,18 @@
 C_TEXT:C284($1)
 C_TEXT:C284($2)
 C_BOOLEAN:C305($0)
-C_LONGINT:C283($i)
+C_LONGINT:C283($i;$length1)
+
+$length1:=Length:C16($1)
 
 Case of 
 	: (Count parameters:C259<2)
 		$0:=False:C215
 		
-	: (Length:C16($1)#Length:C16($2))
+	: ($length1#Length:C16($2))
 		$0:=False:C215
 		
-	: (Length:C16($1)<1)
+	: ($length1<1)
 		$0:=True:C214
 		
 	Else 
@@ -28,7 +30,7 @@ Case of
 		Repeat 
 			$i:=$i+1
 			$0:=(Character code:C91($1[[$i]])=Character code:C91($2[[$i]]))
-		Until (Not:C34($0) | Not:C34($i<Length:C16($1)))  // breakLoop, result of (false & xy) is always false
+		Until (Not:C34($0) | Not:C34($i<$length1))  // breakLoop, result of (false & xy) is always false
 		
 		  //%R+
 		
