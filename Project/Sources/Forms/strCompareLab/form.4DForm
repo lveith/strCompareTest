@@ -209,7 +209,7 @@
 				},
 				"oPositionMs": {
 					"type": "input",
-					"left": 149,
+					"left": 147,
 					"top": 25,
 					"width": 101,
 					"height": 17,
@@ -217,13 +217,13 @@
 					"dataSourceTypeHint": "number",
 					"dataSource": "Form:C1466.positionMs",
 					"enterable": false,
-					"numberFormat": "###,###,###,###,###,### ms",
+					"numberFormat": "###,###,###,###,###,##0 ms",
 					"fill": "#191970",
 					"stroke": "#adff2f"
 				},
 				"oPositionMs1": {
 					"type": "input",
-					"left": 259,
+					"left": 257,
 					"top": 25,
 					"width": 101,
 					"height": 17,
@@ -231,7 +231,7 @@
 					"dataSourceTypeHint": "number",
 					"dataSource": "Form:C1466.loopCharCodesMs",
 					"enterable": false,
-					"numberFormat": "###,###,###,###,###,### ms",
+					"numberFormat": "###,###,###,###,###,##0 ms",
 					"fill": "#191970",
 					"stroke": "#adff2f"
 				},
@@ -239,7 +239,7 @@
 					"type": "text",
 					"text": "Position",
 					"top": 6,
-					"left": 149,
+					"left": 147,
 					"width": 101,
 					"height": 16
 				},
@@ -247,7 +247,7 @@
 					"type": "text",
 					"text": "LoopCharCodes",
 					"top": 6,
-					"left": 259,
+					"left": 257,
 					"width": 103,
 					"height": 16
 				},
@@ -369,7 +369,7 @@
 					"type": "text",
 					"text": "150 comparisons repeated",
 					"top": 27,
-					"left": 367,
+					"left": 364,
 					"width": 146,
 					"height": 13,
 					"fontSize": 11,
@@ -377,9 +377,9 @@
 				},
 				"oNumberOfRepetitions": {
 					"type": "input",
-					"left": 510,
+					"left": 508,
 					"top": 27,
-					"width": 66,
+					"width": 97,
 					"height": 13,
 					"fontSize": 11,
 					"stroke": "#191970",
@@ -393,21 +393,12 @@
 					"min": 0,
 					"max": 100000000,
 					"hideFocusRing": true,
-					"textAlign": "center"
-				},
-				"Text3": {
-					"type": "text",
-					"text": "times",
-					"top": 27,
-					"left": 579,
-					"width": 30,
-					"height": 13,
-					"fontSize": 11,
-					"stroke": "#191970"
+					"textAlign": "left",
+					"numberFormat": " ###,###,###,###,###,##0"
 				},
 				"oComparisonsTotal": {
 					"type": "input",
-					"left": 367,
+					"left": 364,
 					"top": 7,
 					"width": 242,
 					"height": 13,
@@ -415,7 +406,7 @@
 					"stroke": "#191970",
 					"borderStyle": "none",
 					"fill": "transparent",
-					"dataSource": "\"comparisons total \"+String:C10(Form:C1466.numberOfRepetitions*150;\"###,###,###,###,###\")",
+					"dataSource": "\"comparisons total \"+String:C10(Form:C1466.numberOfRepetitions*150;\"###,###,###,###,###,##0\")",
 					"dataSourceTypeHint": "text",
 					"multiline": "no",
 					"contextMenu": "none",
@@ -425,7 +416,7 @@
 					"textAlign": "left",
 					"enterable": false,
 					"focusable": false,
-					"right": 609
+					"right": 606
 				}
 			}
 		}
