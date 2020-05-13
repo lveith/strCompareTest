@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"invisible":true}
   // PM: "setSameBgColorsForSameContent"
 
 C_LONGINT:C283($foregroundColor;$backgroundColor)
