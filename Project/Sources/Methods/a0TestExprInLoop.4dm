@@ -35,10 +35,10 @@ Else
 	$countTimeExprOutsideLoop:=$stop-$start
 	
 	$resultTxt:=""
-	$resultTxt:=$resultTxt+"numberOfRepetitions: "+String:C10($numberOfRepetitions)+Char:C90(13)
-	$resultTxt:=$resultTxt+"ExprInsideLoop: "+String:C10($countTimeExprInsideLoop)+" ms"+Char:C90(13)
-	$resultTxt:=$resultTxt+"ExprOutsideLoop: "+String:C10($countTimeExprOutsideLoop)+" ms"+Char:C90(13)
-	$resultTxt:=$resultTxt+"Difference: "+String:C10(Abs:C99($countTimeExprInsideLoop-$countTimeExprOutsideLoop))+" ms"+Char:C90(13)
+	$resultTxt:=$resultTxt+"numberOfRepetitions: "+String:C10($numberOfRepetitions;"###,###,###,###,###,##0")+Char:C90(13)
+	$resultTxt:=$resultTxt+"ExprInsideLoop: "+String:C10($countTimeExprInsideLoop;"###,###,###,###,###,##0")+" ms"+Char:C90(13)
+	$resultTxt:=$resultTxt+"ExprOutsideLoop: "+String:C10($countTimeExprOutsideLoop;"###,###,###,###,###,##0")+" ms"+Char:C90(13)
+	$resultTxt:=$resultTxt+"Difference: "+String:C10(Abs:C99($countTimeExprInsideLoop-$countTimeExprOutsideLoop);"###,###,###,###,###,##0")+" ms"+Char:C90(13)
 	ALERT:C41($resultTxt)
 	
 End if 

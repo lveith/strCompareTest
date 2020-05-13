@@ -114,11 +114,11 @@ Else
 	
 	
 	  // ====== output result times ======
-	$c[0]:="loopAllCharCodes:\t\t"+String:C10($c[0])+" ms"
-	$c[1]:="Position:\t\t\t\t"+String:C10($c[1])+" ms"
-	$c[2]:="Match regex:\t\t\t"+String:C10($c[2])+" ms"
-	$c[3]:="OB Is defined:\t\t\t"+String:C10($c[3])+" ms"
-	$c[4]:="collection.equal:\t\t\t"+String:C10($c[4])+" ms"
+	$c[0]:="loopAllCharCodes:\t\t"+String:C10($c[0];"###,###,###,###,###,##0")+" ms"
+	$c[1]:="Position:\t\t\t\t"+String:C10($c[1];"###,###,###,###,###,##0")+" ms"
+	$c[2]:="Match regex:\t\t\t"+String:C10($c[2];"###,###,###,###,###,##0")+" ms"
+	$c[3]:="OB Is defined:\t\t\t"+String:C10($c[3];"###,###,###,###,###,##0")+" ms"
+	$c[4]:="collection.equal:\t\t\t"+String:C10($c[4];"###,###,###,###,###,##0")+" ms"
 	ALERT:C41($c.join("\r"))
 	
 End if 
