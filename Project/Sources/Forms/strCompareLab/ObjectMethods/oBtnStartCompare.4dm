@@ -20,6 +20,51 @@ Case of
 		$t5:=Form:C1466.str5
 		$t6:=Form:C1466.str6
 		
+		If (Shift down:C543)  // do extra self-check before, only when shift-key is pressed
+			  // first check methods "strComparePosition" and "strCompareLoopCharCodes"
+			  // has same results (selfcheck, to detect maybe a method give wrong results)
+			C_COLLECTION:C1488($colPos;$colLoopChars)
+			
+			$colPos:=New collection:C1472
+			$colPos.push(strComparePosition ($t1;$t2))
+			$colPos.push(strComparePosition ($t1;$t3))
+			$colPos.push(strComparePosition ($t1;$t4))
+			$colPos.push(strComparePosition ($t1;$t5))
+			$colPos.push(strComparePosition ($t1;$t6))
+			$colPos.push(strComparePosition ($t2;$t3))
+			$colPos.push(strComparePosition ($t2;$t4))
+			$colPos.push(strComparePosition ($t2;$t5))
+			$colPos.push(strComparePosition ($t2;$t6))
+			$colPos.push(strComparePosition ($t3;$t4))
+			$colPos.push(strComparePosition ($t3;$t5))
+			$colPos.push(strComparePosition ($t3;$t6))
+			$colPos.push(strComparePosition ($t4;$t5))
+			$colPos.push(strComparePosition ($t4;$t6))
+			$colPos.push(strComparePosition ($t5;$t6))
+			
+			$colLoopChars:=New collection:C1472
+			$colLoopChars.push(strCompareLoopCharCodes ($t1;$t2))
+			$colLoopChars.push(strCompareLoopCharCodes ($t1;$t3))
+			$colLoopChars.push(strCompareLoopCharCodes ($t1;$t4))
+			$colLoopChars.push(strCompareLoopCharCodes ($t1;$t5))
+			$colLoopChars.push(strCompareLoopCharCodes ($t1;$t6))
+			$colLoopChars.push(strCompareLoopCharCodes ($t2;$t3))
+			$colLoopChars.push(strCompareLoopCharCodes ($t2;$t4))
+			$colLoopChars.push(strCompareLoopCharCodes ($t2;$t5))
+			$colLoopChars.push(strCompareLoopCharCodes ($t2;$t6))
+			$colLoopChars.push(strCompareLoopCharCodes ($t3;$t4))
+			$colLoopChars.push(strCompareLoopCharCodes ($t3;$t5))
+			$colLoopChars.push(strCompareLoopCharCodes ($t3;$t6))
+			$colLoopChars.push(strCompareLoopCharCodes ($t4;$t5))
+			$colLoopChars.push(strCompareLoopCharCodes ($t4;$t6))
+			$colLoopChars.push(strCompareLoopCharCodes ($t5;$t6))
+			
+			If (Not:C34($colPos.equal($colLoopChars;ck diacritical:K85:3)))
+				ALERT:C41("Error: Diff-Result between methods\r'strComparePosition'\rand\r'strCompareLoopCharCodes'")
+				TRACE:C157
+			End if 
+		End if 
+		
 		$numberOfRepetitions:=Num:C11(Form:C1466.numberOfRepetitions)
 		
 		$start:=Milliseconds:C459
