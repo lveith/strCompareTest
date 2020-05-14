@@ -88,7 +88,9 @@
 					"dataSource": "Form:C1466.str1",
 					"sizingX": "grow",
 					"sizingY": "grow",
-					"fill": "automatic"
+					"fill": "automatic",
+					"tooltip": "Note: Copy&Paste auto convert line-breaks (4Dintern=CR, Window=CRLF, Mac=LF, Unix=LF, WebStandard=LF)",
+					"placeholder": ""
 				},
 				"Splitter": {
 					"type": "splitter",
@@ -109,7 +111,8 @@
 					"scrollbarVertical": "automatic",
 					"dataSource": "Form:C1466.str2",
 					"sizingX": "grow",
-					"sizingY": "grow"
+					"sizingY": "grow",
+					"tooltip": "Note: Copy&Paste auto convert line-breaks (4Dintern=CR, Window=CRLF, Mac=LF, Unix=LF, WebStandard=LF)"
 				},
 				"Splitter1": {
 					"type": "splitter",
@@ -130,7 +133,8 @@
 					"scrollbarVertical": "automatic",
 					"dataSource": "Form:C1466.str3",
 					"sizingX": "grow",
-					"sizingY": "grow"
+					"sizingY": "grow",
+					"tooltip": "Note: Copy&Paste auto convert line-breaks (4Dintern=CR, Window=CRLF, Mac=LF, Unix=LF, WebStandard=LF)"
 				},
 				"Splitter2": {
 					"type": "splitter",
@@ -151,7 +155,8 @@
 					"scrollbarVertical": "automatic",
 					"dataSource": "Form:C1466.str4",
 					"sizingX": "grow",
-					"sizingY": "grow"
+					"sizingY": "grow",
+					"tooltip": "Note: Copy&Paste auto convert line-breaks (4Dintern=CR, Window=CRLF, Mac=LF, Unix=LF, WebStandard=LF)"
 				},
 				"Splitter3": {
 					"type": "splitter",
@@ -172,7 +177,8 @@
 					"scrollbarVertical": "automatic",
 					"dataSource": "Form:C1466.str5",
 					"sizingX": "grow",
-					"sizingY": "grow"
+					"sizingY": "grow",
+					"tooltip": "Note: Copy&Paste auto convert line-breaks (4Dintern=CR, Window=CRLF, Mac=LF, Unix=LF, WebStandard=LF)"
 				},
 				"Splitter4": {
 					"type": "splitter",
@@ -193,7 +199,8 @@
 					"scrollbarVertical": "automatic",
 					"dataSource": "Form:C1466.str6",
 					"sizingX": "grow",
-					"sizingY": "grow"
+					"sizingY": "grow",
+					"tooltip": "Note: Copy&Paste auto convert line-breaks (4Dintern=CR, Window=CRLF, Mac=LF, Unix=LF, WebStandard=LF)"
 				},
 				"oBtnStartCompare": {
 					"type": "button",
@@ -221,7 +228,7 @@
 					"fill": "#191970",
 					"stroke": "#adff2f"
 				},
-				"oPositionMs1": {
+				"oLoopCharCodesMs": {
 					"type": "input",
 					"left": 257,
 					"top": 25,
