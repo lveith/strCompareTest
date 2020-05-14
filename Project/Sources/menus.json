@@ -31,7 +31,7 @@
 			"title": ":xliff:CommonMenuFile",
 			"items": [
 				{
-					"title": "openTest",
+					"title": "openTest StrCompare",
 					"method": "startTestForm"
 				},
 				{
@@ -57,6 +57,14 @@
 					"title": "vdlOrg_withRangeCheckActive",
 					"method": "vdlOrgTest_withRangeCheckActive",
 					"startNewProcess": true
+				},
+				{
+					"isSeparator": true,
+					"enabled": false
+				},
+				{
+					"title": "openTest LocalVar",
+					"method": "startTestFormLocalVar"
 				},
 				{
 					"isSeparator": true,
