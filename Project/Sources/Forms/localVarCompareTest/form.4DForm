@@ -1,0 +1,246 @@
+﻿{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {
+				"oBtnTrace": {
+					"type": "button",
+					"text": "#",
+					"top": 1,
+					"left": 621,
+					"width": 27,
+					"height": 24,
+					"events": [
+						"onClick"
+					],
+					"fontWeight": "bold",
+					"fontSize": 18,
+					"stroke": "#da70d6",
+					"tooltip": "Cancel",
+					"method": "ObjectMethods/oBtnTrace.4dm",
+					"sizingX": "move"
+				},
+				"oBtnCancel": {
+					"type": "button",
+					"text": "✗",
+					"top": 1,
+					"left": 654,
+					"width": 27,
+					"height": 24,
+					"events": [
+						"onClick"
+					],
+					"fontWeight": "bold",
+					"fontSize": 18,
+					"stroke": "#dc143c",
+					"tooltip": "Close",
+					"method": "ObjectMethods/oBtnCancel.4dm",
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[Esc]",
+					"sizingX": "move"
+				}
+			}
+		},
+		{
+			"objects": {
+				"oStr1": {
+					"type": "input",
+					"left": 18,
+					"top": 54,
+					"width": 638,
+					"height": 61,
+					"scrollbarHorizontal": "automatic",
+					"scrollbarVertical": "automatic",
+					"dataSource": "Form:C1466.str1",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"fill": "automatic",
+					"tooltip": "Note: Copy&Paste auto convert line-breaks (4Dintern=CR, Window=CRLF, Mac=LF, Unix=LF, WebStandard=LF)"
+				},
+				"Splitter": {
+					"type": "splitter",
+					"left": 0,
+					"top": 135,
+					"width": 681,
+					"height": 5,
+					"right": 681,
+					"sizingX": "grow"
+				},
+				"oStr2": {
+					"type": "input",
+					"left": 18,
+					"top": 143,
+					"width": 638,
+					"height": 61,
+					"scrollbarHorizontal": "automatic",
+					"scrollbarVertical": "automatic",
+					"dataSource": "Form:C1466.str2",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"tooltip": "Note: Copy&Paste auto convert line-breaks (4Dintern=CR, Window=CRLF, Mac=LF, Unix=LF, WebStandard=LF)"
+				},
+				"oBtnStartCompare": {
+					"type": "button",
+					"text": "Start comparing",
+					"top": 6,
+					"left": 9,
+					"width": 129,
+					"height": 37,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/oBtnStartCompare.4dm"
+				},
+				"oFormObjMs": {
+					"type": "input",
+					"left": 147,
+					"top": 25,
+					"width": 121,
+					"height": 17,
+					"sizingX": "fixed",
+					"dataSourceTypeHint": "number",
+					"dataSource": "Form:C1466.formObjMs",
+					"enterable": false,
+					"numberFormat": "###,###,###,###,###,##0 ms",
+					"fill": "#191970",
+					"stroke": "#adff2f"
+				},
+				"oLocalVarMs": {
+					"type": "input",
+					"left": 277,
+					"top": 25,
+					"width": 121,
+					"height": 17,
+					"sizingX": "fixed",
+					"dataSourceTypeHint": "number",
+					"dataSource": "Form:C1466.localVarMs",
+					"enterable": false,
+					"numberFormat": "###,###,###,###,###,##0 ms",
+					"fill": "#191970",
+					"stroke": "#adff2f"
+				},
+				"Text": {
+					"type": "text",
+					"text": "Form.str innerLoop",
+					"top": 6,
+					"left": 147,
+					"width": 121,
+					"height": 16
+				},
+				"Text1": {
+					"type": "text",
+					"text": "$localVar innerLoop",
+					"top": 6,
+					"left": 277,
+					"width": 123,
+					"height": 16
+				},
+				"oStr1Length": {
+					"type": "input",
+					"left": 565,
+					"top": 51,
+					"width": 88,
+					"height": 12,
+					"sizingX": "move",
+					"dataSourceTypeHint": "number",
+					"dataSource": "Length:C16(Form:C1466.str1)",
+					"enterable": false,
+					"numberFormat": "",
+					"fill": "transparent",
+					"stroke": "#0000cd",
+					"fontSize": 10,
+					"textAlign": "right",
+					"focusable": false,
+					"contextMenu": "none",
+					"borderStyle": "none"
+				},
+				"oStr2Length": {
+					"type": "input",
+					"left": 565,
+					"top": 140,
+					"width": 88,
+					"height": 12,
+					"sizingX": "move",
+					"dataSourceTypeHint": "number",
+					"dataSource": "Length:C16(Form:C1466.str2)",
+					"enterable": false,
+					"numberFormat": "",
+					"fill": "transparent",
+					"stroke": "#0000cd",
+					"fontSize": 10,
+					"textAlign": "right",
+					"focusable": false,
+					"contextMenu": "none",
+					"borderStyle": "none"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Number of repetitions",
+					"top": 27,
+					"left": 404,
+					"width": 118,
+					"height": 13,
+					"fontSize": 11,
+					"stroke": "#191970"
+				},
+				"oNumberOfRepetitions": {
+					"type": "input",
+					"left": 522,
+					"top": 27,
+					"width": 97,
+					"height": 13,
+					"fontSize": 11,
+					"stroke": "#191970",
+					"borderStyle": "dotted",
+					"fill": "transparent",
+					"dataSource": "Form:C1466.numberOfRepetitions",
+					"dataSourceTypeHint": "integer",
+					"multiline": "no",
+					"contextMenu": "none",
+					"defaultValue": "1000000",
+					"min": 0,
+					"max": 999999999,
+					"hideFocusRing": true,
+					"textAlign": "left",
+					"numberFormat": " ###,###,###,###,###,##0"
+				}
+			}
+		}
+	],
+	"method": "method.4dm",
+	"menuBar": "menubar #2"
+}
