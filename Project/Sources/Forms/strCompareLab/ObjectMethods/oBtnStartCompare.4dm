@@ -63,7 +63,7 @@ Case of
 				ALERT:C41("Error: Diff-Result between methods\r'strComparePosition'\rand\r'strCompareLoopCharCodes'")
 				TRACE:C157
 			Else 
-				a0TestExprInLoop   // just another speed-test for expressions like Form.str1 vs. $localVar
+				  // a0TestExprInLoop   // just another speed-test for expressions like Form.str1 vs. $localVar
 				ALERT:C41("If you want to start Comparings, click again on button without shift-down")
 			End if 
 			
